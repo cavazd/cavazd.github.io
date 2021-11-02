@@ -3,7 +3,6 @@
   Date (MM/DD/YYYY): 11/02/2021
 
   CSS file to style the body, images, and headers for index.html.
-  test
 */
 
 *{
@@ -34,6 +33,11 @@ nav {
   font-size: 26px;
   padding: 0;
   margin: 0;
+}
+
+.home-logo a {
+  color: black;
+  text-decoration: none;
 }
 
 
