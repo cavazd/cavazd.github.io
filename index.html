@@ -1,104 +1,34 @@
 <!DOCTYPE html>
 <!--
-  Directions:
-  - Try viewing the page before you make any changes
-  - Look for all the places it say *** TODO: _____ ***
-  - Remove the *** TODO: _____ *** and follow the instructions. i.e. if it says
-    *** TODO: Give the page a title *** do just that, write a title for the page in place of the
-    todo item. Your final submission should not include any TODO comments
-  -->
-
-<!--
   ***
-  Dev: Daniel Cavazos
-  Date (MM/DD/YYYY): 10/04/2020
-  Section: AH, Ludvig Liljenberg
+  Dev: Daniel Cavazos (cavazd)
+  Date (MM/DD/YYYY): 11/02/2021
 
-  HTML file to create an about me page. Inlcudes infomation such as what classes
-  the dev is taking, their favorite things, pictures to represent a series of
-  emotions, and favorite quotes.
+  HTML file to create the home page for my personal website.
   ***
 -->
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="styles.css">
-    <title>About Me</title>
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <title>Daniel Cavazos</title>
   </head>
   <body>
-    <div id="header">
-      <section>
-        <h1>Brief About Me</h1>
-        <p>
-          Hi, I'm Daniel and I'm in my second year at the University of Washington.
-          I'm looking forward to learning more about UX design and how to apply it
-          into web programming this quarter.
-        </p>
-      </section>
-    </div>
+    <nav>
+      <p class="home-logo">Daniel Cavazos</p>
 
-    <section>
-      <!-- Classes taken by dev as of given date-->
-      <h2>Classes I'm currently taking</h2>
-      <aside><span class="italic">As of October 4, 2020</span></aside>
-      <ol>
-        <li><span class="thick">CSE &nbsp;&nbsp;154</span> - Web Programming</li>
-        <li><span class="thick">INFO &nbsp;360</span> - Design Methods</li>
-        <li><span class="thick">SPAN 201</span> - Intermediate Spanish</li>
-        <li><span class="thick">INFO &nbsp;498</span> - Technology, Freedom, and Justice</li>
-      </ol>
-    </section>
+      <ul>
+        <li><a class="active" href="#">HOME</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">PROJECTS</a></li>
+        <li><a href="#">RESUME</a></li>
+     </ul>
 
-    <section>
-      <h2>Five of My Favorite Things</h2>
-      <ol>
-        <li><span class="thick">Favorite animal:</span>
-          <a href="https://en.wikipedia.org/wiki/Elephant" target="_blank">
-            Elephant
-          </a>
-          (<a href="elephant.html">learn more</a>)
-        </li>
-        <li><span class="thick">Favorite food:</span> Costco Muffins</li>
-        <li><span class="thick">Favorite TV show:</span>
-          <a href="https://www.imdb.com/title/tt1266020/" target="_blank">
-            Parks and Rec
-          </a>
-        </li>
-        <li><span class="thick">Favorite hobby:</span> Playing Music</li>
-        <li><span class="thick">Favorite chip flavor:</span> Honey BBQ</li>
-      </ol>
-
-      <h3>A picture that represents when I'm happy</h3>
-      <img src="img/happy-doggo.jpg"
-        alt="Picture of smiling retriever dog wearing a fedora"
-        >
-      <p>
-        photo <a href="https://tinyurl.com/y6cwhfqs" target="_blank">posted</a> by Reddit user
-        <a href="https://www.reddit.com/user/AlfieHenderson26/" target="_blank">
-          u/AlfieHenderson26.
-        </a>
-      </p>
-
-      <h3>A picture that represents when I'm sad</h3>
-      <img src="img/sad-dog-in-cheese.jpg"
-        alt="Picture of a pug in a cheese sweater with a bowl of string cheese and gold fish
-          and a bowl of cheese puffs"
-          >
-        <p>photo found on
-          <a href="https://tinyurl.com/y5rsry4c" target="_blank">
-            The Chive.
-          </a>
-        </p>
-
-      <h3>One of my favorite quotes</h3>
-      <article>
-        <blockquote>
-          <p>
-            "I don't make bad decisions."
-          </p>
-          <footer>- Luke Dorsett</footer>
-        </blockquote>
-      </article>
-    </section>
+      <!-- <p class="nav-btns">HOME</p>
+      <p class="nav-btns">ABOUT</p>
+      <p class="nav-btns">PROJECTS</p>
+      <p class="nav-btns">RESUME</p> -->
+    </nav>
   </body>
 </html>
