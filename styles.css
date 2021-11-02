@@ -1,0 +1,49 @@
+/*
+  Dev: Daniel Cavazos
+  Date (MM/DD/YYYY): 10/04/2020
+  Section: AH, Ludvig Liljenberg
+
+  CSS file to style the body, images, and headers for about.html and elephant.html.
+*/
+
+/*
+  Note: This body rule set is to get you started
+*/
+body {
+  background-color: rgb(139, 173, 204);
+  font-family: "Helvetica", sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+img {
+  max-width: 33%;
+  width: 33%;
+  height: auto;
+  overflow: hidden;
+}
+
+#header {
+  background-color: rgb(17, 44, 70);
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+#header > section > p {
+  color: rgb(170, 190, 207);
+}
+
+#header, aside, small {
+  color: white;
+}
+
+.thick {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
