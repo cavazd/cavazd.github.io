@@ -125,3 +125,16 @@ nav ul li a:hover{
   font-size: 20px;
   font-weight: 400;
 }
+
+#about-body {
+  display: flex;
+  align-items: center;
+  margin-top: 35vh;
+  margin-left: 8vw;
+}
+
+#about-intro {
+  font-size: 40px;
+  font-weight: 400;
+  font-style: italic;
+}
