@@ -22,18 +22,141 @@
         <p id="model-card-ver">Model Card v1</p>
       </div>
       <section id="references">
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Clients</a>
-        <a id="last-ref" href="#">Contact</a>
+        <a href="#">Overview</a>
+        <a href="#">Limitations</a>
+        <a href="#">Trade-Offs</a>
+        <a href="#">Performance</a>
+        <a id="last-ref" href="#">Test The Model</a>
       </section>
     </div>
 
     <!-- Page content -->
-    <div class="main">
-      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae ullamcorper nisi. Sed tincidunt urna augue, non volutpat lacus rutrum vitae. Proin ac eros enim. Nam euismod odio pellentesque elit rhoncus iaculis. Nullam id ligula vitae velit egestas feugiat. Sed feugiat nec velit eu vehicula. Pellentesque vel nisl quam. Curabitur sit amet ligula varius, euismod nibh tempus, tincidunt ante. Nulla facilisi. Mauris justo lectus, vestibulum ut ex viverra, varius cursus arcu. In hac habitasse platea dictumst. Donec quis elit porttitor elit luctus condimentum a id erat. Vivamus tempus finibus neque nec pretium. Aenean ultrices elit eget maximus malesuada. Cras at libero lacus. Suspendisse dictum augue sit amet erat vulputate pharetra.
+    <section class="main">
 
-        Praesent at mauris bibendum, malesuada libero eget, dictum odio. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Fusce ornare, ante eu lobortis dapibus, dolor eros condimentum nulla, finibus luctus metus lorem vel ante. Praesent tincidunt libero sit amet lectus tincidunt, id ornare elit placerat. Donec sapien tellus, euismod et pharetra eget, rhoncus eu elit. Quisque suscipit nunc sit amet justo rutrum, a mollis sapien ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ligula orci, fringilla id iaculis in, porttitor id arcu. Fusce vulputate elementum dolor, et tempus massa rhoncus id. Phasellus quis auctor massa, a ultricies purus. Suspendisse vehicula odio a mollis luctus. Vestibulum ac odio pharetra, dictum nibh ut, viverra turpis. </p>
-    </div>
+      <section id="overview">
+        <p class="title">Overview</p>
+        <p class="body-text">
+          The model analyzed in this card uses characteristics about
+          a movie to predict whether a movie passes the
+          <a href="https://en.wikipedia.org/wiki/Bechdel_test" target="_blank">Bechdel test</a>.
+          In short, the Bechdel test is a set of questions that can be asked about a
+          form of media to measure the representation of women. The model's
+          goal is to offer another method of using the Bechdel test for
+          discussions surrounding the representation of women in media.
+          The model's goal is <span class="bolded">not</span> to determine whether a form of media is
+          “feminist” or not as this idea is unfaithful to the original goal of
+          being a “cultural barometer” of female representation.
+        </p>
+        <p class="body-text">
+          There are several versions of the Bechdel test, however, the version
+          the data the model is trained on is relatively simple. The test
+          essentially asks the following three questions.
+          <ol>
+            <li>Does it have at least two [named] women in it?</li>
+            <li>Do the women talk to each other?</li>
+            <li>Do they talk about something besides a man?</li>
+          </ol>
+        </p>
+        <p class="body-text">
+          On this page, you can learn more about the inner workings of the
+          model as well as how effectively it performs.
+        </p>
+
+        <section id="overview-subsecs">
+          <section id="overview-model-desc">
+            <p class="subtitle">
+              Model Description
+            </p>
+            <img src="pics/director.jpg" alt="Photo of Director looking through camera" id="model-desc-pic">
+            <p><span class="bolded">Input</span>: Characteristics of a movie (ex. genres)</p>
+            <p><span class="bolded">Output</span>: Model's prediction on:</p>
+            <ul>
+              <li>Whether the movie would pass the Bechdel test</li>
+              <li>
+                What the gross domestic and international profit would be if:
+                <ul>
+                  <li>The movie did pass the Bechdel test</li>
+                  <li>The movie did not pass the Bechdel test</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+
+          <section id="overview-perf">
+            <p class="subtitle">
+              Performance
+            </p>
+            <img src="pics/elbow_graph.png" alt="Elbow graph for max depth" id="model-perf-pic">
+            <p>
+              The overall model performance is measured using the mean squared
+              error. This error is calculated for both the data the model is
+              trained on as well as the data the model is tested on. For the
+              model, a sweet-spot is chosen to avoid overfitting or
+              underfitting the data (see the trade offs section for
+              details).
+            </p>
+          </section>
+        </section>
+      </section>
+
+      <section id="limitations">
+        <p class="title">Limitations</p>
+        <p>
+          <span class="bolded">Size of Dataset</span>: this model was trained on
+          a dataset consisting of 1794 observations, a relatively low sample
+          size for machine learning models
+        </p>
+
+        <p>
+          <span class="bolded">Quality of Data</span>: this dataset's
+          observations consist of movies from the years 1970-2013 and thus may
+          not accurately represent newer films
+        </p>
+
+        <p>
+          <span class="bolded">Crowd-Sourced Data</span>: the data in this
+          dataset was scraped from Bechdel Test Movie List, a website which
+          relies on input from the public to classify movies
+        </p>
+      </section>
+
+      <section id="tradeOffs">
+        <p class="title">Trade-Offs</p>
+        <p>
+          When developing machine learning models, there is a Goldilocks zone
+          that is aimed for. This Goldilocks zone is a trade-off between bias
+          and variance or overfitting and underfitting. Essentially, the model
+          is built with the idea that it should not work so well on the data it
+          is trained on so that it is useless in real world scenarios but it
+          should also not be so varied that it fails to accurately classify the
+          data it trained on. Using performance metrics, a balance was struck
+          between these two concepts in an effort to create a model capable of
+          accurately classifying the data it trained on while remaining useful
+          in new scenarios.
+        </p>
+      </section>
+
+      <section id="performance">
+        <p class="title">Performance</p>
+        <p>
+          This model uses mean squared error (MSE) as its performance metric.
+          MSE is a calculation derived from finding the difference between the
+          model's predictions and the actual results, squaring this value, and
+          then calculating the mean of these squares. This metric is then used
+          to compare the effects of changing different hyperparameters of the
+          decision tree such as the max tree depth of the max number
+          of features.
+        </p>
+      </section>
+
+      <section id="Test The Model">
+        <p class="title">Test The Model</p>
+        <p>
+          [ Here users would be able to change different inputs to see how
+          it would change the model's output ]
+        </p>
+      </section>
+
+    </section>
   </body>
 </html>
