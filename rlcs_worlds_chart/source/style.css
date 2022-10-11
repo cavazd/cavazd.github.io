@@ -1,0 +1,64 @@
+.teamText {
+  font-size: 14px;
+  color: black;
+  text-anchor: middle;
+}
+
+.leftName {
+  font-size: 14px;
+  color: black;
+  text-align: right;
+}
+
+.mainTitle {
+  font-size: 44px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.dimmed {
+  opacity: 0.25;
+}
+
+.bumpLine {
+  stroke-width: 4px;
+}
+
+.toolTip {
+  background-color: white;
+  padding-left: 8px;
+  padding-right: 8px;
+  border: 1px solid;
+}
+
+.bolden {
+  font-weight: bold;
+}
+
+.x {
+  font-size: 12px;
+}
+
+.regSel {
+  fill: White;
+  stroke: black;
+}
+
+.regText {
+  fill: black;
+  stroke: none;
+  font-size: 26px;
+}
+
+/* #regBtn {
+  position: absolute;
+  top: 28px;
+  right: 350px;
+  font-size: 28px;
+}
+
+#regionAttrSelector {
+  position: absolute;
+  top: 28px;
+  right: 200px;
+} */
