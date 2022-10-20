@@ -127,14 +127,28 @@ nav ul li a:hover{
 }
 
 #about-body {
-  display: flex;
-  align-items: center;
-  margin-top: 35vh;
+  margin-top: 4vh;
   margin-left: 8vw;
+  margin-right: 8vw;
 }
 
-#about-intro {
+#about-me {
   font-size: 40px;
   font-weight: 400;
   font-style: italic;
+}
+
+#about-body > img {
+  position: fixed;
+  width: 25%;
+  height: auto;
+}
+
+#about-body > div {
+  margin-left: 30vw;
+  margin-bottom: 4vh;
+}
+
+#about-body p {
+  text-indent: 45px;
 }
